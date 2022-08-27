@@ -1,0 +1,32 @@
+{
+    "name": "chenjiacheng/hyperf-tim",
+    "description": "腾讯云 即时通信 IM SDK for Hyperf",
+    "type": "library",
+    "keywords": [
+        "php",
+        "im",
+        "hyperf"
+    ],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "chenjiacheng",
+            "email": "405339556@qq.com"
+        }
+    ],
+    "require": {
+        "php": ">=8.0.2",
+        "chenjiacheng/tim": "^1.0",
+        "hyperf/guzzle": "^2.2|^3.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Chenjiacheng\\HyperfTim\\": "src"
+        }
+    },
+    "extra": {
+        "hyperf": {
+            "config": "Chenjiacheng\\HyperfPay\\ConfigProvider"
+        }
+    }
+}
