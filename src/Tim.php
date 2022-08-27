@@ -50,7 +50,7 @@ class Tim
         $config = $container->get(ConfigInterface::class)->get('tim', []);
         $this->tim = new \Chenjiacheng\Tim\Tim($config);
 
-        $httpClient = $container->get(ClientFactory::class)->create($config['http'] ?? []);
+        $httpClient = $container->get(ClientFactory::class)->create($this->tim->config->get('http', []));
         $this->tim->offsetSet('httpClient', $httpClient);
     }
 
