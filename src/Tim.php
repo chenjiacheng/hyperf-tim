@@ -14,6 +14,7 @@ use Chenjiacheng\Tim\Service\Profile;
 use Chenjiacheng\Tim\Service\Push;
 use Chenjiacheng\Tim\Service\Sns;
 use Chenjiacheng\Tim\Support\Config;
+use GuzzleHttp\Client;
 use Hyperf\Contract\ConfigInterface;
 use Hyperf\Contract\ContainerInterface;
 use Hyperf\Guzzle\ClientFactory;
@@ -29,7 +30,7 @@ use Hyperf\Guzzle\ClientFactory;
  * @property Push $push
  * @property Sns $sns
  * @property Config $config
- * @property ClientFactory $httpClient
+ * @property Client $httpClient
  */
 class Tim
 {
