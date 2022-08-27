@@ -30,7 +30,33 @@ php bin/hyperf.php vendor:publish chenjiacheng/hyperf-tim
 ## 使用示例
 
 ```php
+<?php
 
+declare(strict_types=1);
+
+namespace App\Controller;
+
+use Chenjiacheng\HyperfTim\Tim;
+
+class TimController extends AbstractController
+{
+    public function testImport(Tim $tim)
+    {
+        // 第一种方式
+        $result1 = $tim->account->import('101');
+        var_dump($result1);
+
+        // 第二种方式
+        $result2 = make(Tim::class)->account->import('102');
+        var_dump($result2);
+
+        // 第三种方式
+        $result3 = make(\Chenjiacheng\Tim\Tim::class)->account->import('103');
+        var_dump($result3);
+
+        return [];
+    }
+}
 ```
 
 更多示例请查看 [https://github.com/chenjiacheng/tim](https://github.com/chenjiacheng/tim)
